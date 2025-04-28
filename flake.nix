@@ -18,10 +18,10 @@
         src = ./.;
         snowfall = {
           meta = {
-            name = "dpacks";
+            name = "dmods";
             title = "Normal Setup";
           };
-          namespace = "dpacks";
+          namespace = "dmods";
         };
       };
     in
