@@ -1,5 +1,5 @@
 { pkgs, ... }:
 with pkgs; [
-      hypridle
-      wl-clipboard-rs
+  hypridle
+  wl-clipboard-rs
 ]

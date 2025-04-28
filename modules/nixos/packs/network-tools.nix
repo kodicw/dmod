@@ -1,11 +1,11 @@
-{pkgs, ...}: 
+{ pkgs, ... }:
 with pkgs; [
-      wireshark
-      netscanner
-      nmap
-      netcat
-      rustscan
-      whois
-      tcpdump
-      ngrep
+  wireshark
+  netscanner
+  nmap
+  netcat
+  rustscan
+  whois
+  tcpdump
+  ngrep
 ]
