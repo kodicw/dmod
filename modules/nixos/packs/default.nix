@@ -32,7 +32,6 @@ let
     )
     packDef;
   getPacks = x: lib.flatten (lib.attrValues (enablePacks x));
-
 in
 
 {
@@ -53,14 +52,13 @@ in
       };
     };
 
-
     boot.kernel.sysctl = lib.mkIf cfg.gaming.enable {
       "kernel.sched_cfs_bandwidth_slice_us" = 3000;
       "net.ipv4.tcp_fin_timeout" = 5;
       "vm.max_map_count" = 2147483642;
     };
 
-    ${namespace} = lib.mkIf cfg.mySystem.enable {
+    ${namespace} = lib.mkIf cfg.mySystemDefaults.enable {
       system = {
         locale.enable = true;
         fonts.enable = true;

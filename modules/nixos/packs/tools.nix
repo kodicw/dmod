@@ -8,5 +8,8 @@ with pkgs; [
   iperf3
   minicom
   mosh
+  trash-cli
+  bruno
+  ghidra
   sshfs
 ]
