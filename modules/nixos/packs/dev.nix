@@ -7,7 +7,6 @@ with pkgs; [
   bun
   nodejs
   nim
-  codon
   rust
   quickemu
   thonny
