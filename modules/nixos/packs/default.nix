@@ -36,7 +36,7 @@ in
 
 {
   options.${namespace}.packs = (packOptions packDef) // {
-    mySystem.enable = lib.mkEnableOption "network-tools";
+    mySystemDefaults.enable = lib.mkEnableOption "network-tools";
     openssh.enable = lib.mkEnableOption "openssh";
   };
 
