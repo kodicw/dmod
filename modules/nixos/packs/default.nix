@@ -65,6 +65,6 @@ in
     #     time.enable = true;
     #     xkb.enable = true;
     #   };
-    };
+    # };
   };
 }
