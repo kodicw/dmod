@@ -4,7 +4,6 @@ with pkgs; [
   freecad-wayland
   discord
   gparted
-  kdenlive
   kitty
   libreoffice
   localsend

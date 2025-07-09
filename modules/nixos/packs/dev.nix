@@ -1,6 +1,7 @@
 { pkgs, ... }:
 with pkgs; [
   just
+  lua
   go
   gcc
   bun
