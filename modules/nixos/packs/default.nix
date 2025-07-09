@@ -58,13 +58,13 @@ in
       "vm.max_map_count" = 2147483642;
     };
 
-    ${namespace} = lib.mkIf cfg.mySystemDefaults.enable {
-      system = {
-        locale.enable = true;
-        fonts.enable = true;
-        time.enable = true;
-        xkb.enable = true;
-      };
+    # ${namespace} = lib.mkIf cfg.mySystemDefaults.enable {
+    #   system = {
+    #     locale.enable = true;
+    #     fonts.enable = true;
+    #     time.enable = true;
+    #     xkb.enable = true;
+    #   };
     };
   };
 }
