@@ -1,6 +1,5 @@
 { pkgs, ... }:
 with pkgs; [
-  ark
   brightnessctl # Control device brightnes
   ffmpeg
   fzf
