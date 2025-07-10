@@ -1,5 +1,6 @@
 { pkgs, ... }:
-with pkgs; [
+with pkgs;
+[
   just
   lua
   go
@@ -7,7 +8,6 @@ with pkgs; [
   bun
   nodejs
   nim
-  rust
   quickemu
   thonny
 ]

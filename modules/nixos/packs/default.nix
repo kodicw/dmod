@@ -11,18 +11,20 @@ let
       packImport = x: import x { inherit pkgs; };
     in
     {
-      cli = packImport ./cli-apps.nix;
-      tools = packImport ./tools.nix;
-      nix = packImport ./nix.nix;
+      android-tools = packImport ./android-tools.nix;
       art = packImport ./art.nix;
       charm = packImport ./charm.nix;
+      cli = packImport ./cli-apps.nix;
       desktop = packImport ./desktop.nix;
-      python = (packImport ./python.nix) ++ [ pkgs.virtualenv ];
-      gaming = packImport ./gaming.nix;
       dev = packImport ./dev.nix;
+      gaming = packImport ./gaming.nix;
       hyprland = packImport ./hyprland.nix;
       network-tools = packImport ./network-tools.nix;
-      android-tools = packImport ./android-tools.nix;
+      nix = packImport ./nix.nix;
+      media = packImport ./media.nix;
+      python = (packImport ./python.nix) ++ [ pkgs.virtualenv ];
+      tools = packImport ./tools.nix;
+      sip-tools = packImport ./sip-tools.nix;
     };
 
   packOptions = x: lib.mapAttrs (name: value: { enable = lib.mkEnableOption ""; }) x;

@@ -1,5 +1,6 @@
 { pkgs, ... }:
-with pkgs; [
+with pkgs;
+[
   brightnessctl # Control device brightnes
   ffmpeg
   fzf
