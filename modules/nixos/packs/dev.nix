@@ -2,6 +2,9 @@
 with pkgs;
 [
   just
+  lazysql
+  lazydocker
+  lazygit
   lua
   go
   gcc

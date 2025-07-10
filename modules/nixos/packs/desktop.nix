@@ -4,8 +4,8 @@ with pkgs;
   banana-cursor
   freecad-wayland
   discord
+  ghostty
   gparted
-  kitty
   libreoffice
   localsend
   proton-pass
