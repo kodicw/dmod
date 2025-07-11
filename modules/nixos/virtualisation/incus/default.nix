@@ -50,7 +50,7 @@ in
     networking = {
       bridges = {
         "${bridge-interface}" = {
-          interfaces = cfg.bridgeInterfaces; # Replace with your physical interface
+          interfaces = cfg.bridgedInterfaces; # Replace with your physical interface
         };
       };
       nftables.enable = true;
