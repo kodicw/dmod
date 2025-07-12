@@ -6,6 +6,7 @@ with pkgs;
   lazydocker
   lazygit
   lua
+  pixi
   go
   gcc
   bun
