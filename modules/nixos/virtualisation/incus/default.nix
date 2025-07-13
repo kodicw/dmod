@@ -10,7 +10,7 @@ with lib.${namespace};
 let
   cfg = config.${namespace}.virtualisation.incus;
   bridge-interface = "incusbr0";
-  openPorts = [ 8443 ];
+  openPorts = [ 8443 443 80 ];
 in
 {
   options.${namespace}.virtualisation.incus = {
@@ -24,6 +24,11 @@ in
     bridgedInterfaces = mkOption {
       type = types.listOf types.str;
       description = "List of interfaces to be used for container networking";
+    };
+    manageBridge = mkOption {
+      type = types.bool;
+      default = true;
+      description = "Whether Incus should manage its own default bridge (e.g., incusbr0 with internal DHCP). Set to false if you are externally managing a bridge (e.g., via networking.bridges).";
     };
   };
   config = mkIf cfg.enable {
@@ -46,11 +51,16 @@ in
       enable = true;
       ui.enable = cfg.ui;
       package = pkgs.incus;
+      preseed = mkIf (!cfg.manageBridge) {
+        networks = []; # No default networks managed by Incus itself
+      };
     };
     networking = {
+      networkmanager.unmanaged = cfg.bridgedInterfaces;
       bridges = {
         "${bridge-interface}" = {
-          interfaces = cfg.bridgedInterfaces; # Replace with your physical interface
+            interfaces = cfg.bridgedInterfaces; # Replace with your physical interface
+            useDHCP = true;
         };
       };
       nftables.enable = true;
