@@ -60,7 +60,6 @@ in
       bridges = {
         "${bridge-interface}" = {
             interfaces = cfg.bridgedInterfaces; # Replace with your physical interface
-            useDHCP = true;
         };
       };
       nftables.enable = true;
